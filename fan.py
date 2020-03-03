@@ -5,6 +5,8 @@ import sys
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
+fan = 4
+GPIO.setup(fan, GPIO.OUT)
 while True:     # Loop forever
 
     # Read the current temperature
@@ -15,10 +17,10 @@ while True:     # Loop forever
     # Control the fan
     if temp > 65:
         print 'Turning on GPIO 4'
-        GPIO.output(4, True)
+        GPIO.output(fan, True)
     else:
         print 'Turning off GPIO 4'
-        GPIO.output(4, False)
+        GPIO.output(fan, False)
 
     # Wait before the next iteration
     time.sleep(5)
