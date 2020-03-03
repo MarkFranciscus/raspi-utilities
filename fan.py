@@ -1,3 +1,9 @@
+import os
+from time import sleep
+import signal
+import sys
+import RPi.GPIO as GPIO
+
 while True:     # Loop forever
 
     # Read the current temperature
