@@ -23,4 +23,4 @@ while True:     # Loop forever
         GPIO.output(fan, False)
 
     # Wait before the next iteration
-    time.sleep(5)
+    sleep(5)
